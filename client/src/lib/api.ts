@@ -15,7 +15,14 @@ export function errorMessage(err: unknown, fallback = 'Something went wrong.'): 
   if (axios.isAxiosError(err)) {
     const data = err.response?.data as { error?: { message?: string; code?: string } } | undefined;
     if (data?.error?.message) return data.error.message;
-    if (err.code === 'ERR_NETWORK') return 'Network error — is the API server running?';
+    if (err.code === 'ERR_NETWORK') {
+      return import.meta.env.VITE_API_URL
+        ? 'The API server could not be reached. Check the deployed API URL and CORS settings.'
+        : 'The API is not connected to this deployment. Set VITE_API_URL to the deployed API URL.';
+    }
+    if (err.response?.status === 404 && !import.meta.env.VITE_API_URL) {
+      return 'The API is not connected to this deployment. Set VITE_API_URL to the deployed API URL.';
+    }
   }
   return fallback;
 }

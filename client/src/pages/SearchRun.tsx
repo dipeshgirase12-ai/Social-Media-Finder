@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { searchService } from '../lib/api';
+import { errorMessage, searchService } from '../lib/api';
 import { SearchBar } from '../components/search/SearchBar';
 import { SearchProgress } from '../components/search/SearchProgress';
 import { ErrorState, SkeletonCard } from '../components/ui/Feedback';
@@ -33,7 +33,7 @@ export default function SearchRun() {
         sessionStorage.setItem(`dt_search_${resultId}`, JSON.stringify(res));
         navigate(`/search/${resultId}`, { replace: true });
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Search failed. Please try again.');
+        setError(errorMessage(err, 'Search failed. Please try again.'));
       } finally {
         setRunning(false);
       }
