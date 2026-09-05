@@ -5,7 +5,7 @@
   "description": "DevTrace — Public Developer & Profile Discovery Engine. Find. Connect. Understand.",
   "license": "MIT",
   "engines": {
-    "node": "20.x"
+    "node": "24.x"
   },
   "scripts": {
     "install:all": "npm install && npm --prefix server install && npm --prefix client install",
