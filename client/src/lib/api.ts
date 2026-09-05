@@ -5,7 +5,7 @@ import type {
 } from '../types';
 
 export const api = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_URL || '/api',
   withCredentials: true,
   timeout: 45_000,
 });
