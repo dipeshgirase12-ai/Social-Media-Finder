@@ -13,6 +13,8 @@
 </p>
 
 <p align="center">
+  <a href="https://social-media-finder-ruddy.vercel.app/">Live deployment</a>
+  &nbsp;&bull;&nbsp;
   <a href="https://github.com/dipeshgirase12-ai/Social-Media-Finder">Repository</a>
   &nbsp;&bull;&nbsp;
   <a href="http://localhost:5173">Local preview</a>
@@ -368,6 +370,8 @@ The repository also includes `render.yaml` and a server Dockerfile for container
 ### Vercel frontend
 
 The Vercel configuration deploys the Vite client from `client/dist`. The Express API remains a separate service, configured by `render.yaml` or another Node-compatible host.
+
+Live application: [social-media-finder-ruddy.vercel.app](https://social-media-finder-ruddy.vercel.app/)
 
 In the Vercel project settings:
 
