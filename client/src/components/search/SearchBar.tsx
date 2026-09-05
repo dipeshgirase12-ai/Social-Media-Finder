@@ -13,7 +13,7 @@ const EXAMPLES = ['Rahul Sharma', 'torvalds', 'github.com/torvalds'];
 
 /** Primary search input with example suggestions. */
 export const SearchBar = forwardRef<HTMLFormElement, SearchBarProps>(function SearchBar(
-  { onSearch, size = 'md', placeholder = 'Search name, username or GitHub URL...', defaultValue, autoFocus },
+  { onSearch, size = 'md', placeholder = 'Search name, username or URL...', defaultValue, autoFocus },
   ref
 ) {
   const [value, setValue] = useState(defaultValue ?? '');
