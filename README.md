@@ -367,9 +367,9 @@ docker compose up --build
 
 The repository also includes `render.yaml` and a server Dockerfile for container-oriented hosting. For production, configure a managed MongoDB instance, a strong unique `JWT_SECRET`, the exact deployed `CLIENT_URL`, HTTPS, and provider tokens only where they are needed.
 
-### Vercel frontend
+### Vercel deployment
 
-The Vercel configuration deploys the Vite client from `client/dist`. The Express API remains a separate service, configured by `render.yaml` or another Node-compatible host.
+The Vercel configuration deploys the Vite client from `client/dist` and exposes the existing Express API through `api/index.ts`. The browser keeps using the same `/api` route contract, so no API URL is required for an all-in-one Vercel deployment.
 
 Live application: [social-media-finder-ruddy.vercel.app](https://social-media-finder-ruddy.vercel.app/)
 
@@ -377,10 +377,10 @@ In the Vercel project settings:
 
 1. Keep the repository root as the project root.
 2. Use the committed `vercel.json` build configuration.
-3. Add `VITE_API_URL` with the deployed API origin, for example `https://your-api.example.com/api`.
-4. Set the API service's `CLIENT_URL` to the deployed Vercel URL.
+3. Add the server environment variables in the Vercel project: `MONGODB_URI`, `JWT_SECRET`, `CLIENT_URL`, and any optional provider tokens.
+4. Set `CLIENT_URL` to the deployed Vercel URL.
 
-The local fallback remains `/api`, so the existing Vite development proxy continues to work without extra configuration.
+An external Render API remains supported by setting `VITE_API_URL` to its `/api` origin, but it is not required for the Vercel deployment.
 
 ## Verification
 
