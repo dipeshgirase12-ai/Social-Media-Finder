@@ -41,7 +41,7 @@ export function FilterBar({ filter, onFilter, sort, onSort }: FilterBarProps) {
             className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
               filter === f.value
                 ? 'bg-primary-500 text-white shadow-sm'
-                : 'dt-border border dt-muted hover:text-[var(--color-text)] hover:bg-white/5'
+                : 'dt-border border dt-muted hover:text-[var(--color-text)] hover:bg-surface-overlay'
             }`}
           >
             {f.label}

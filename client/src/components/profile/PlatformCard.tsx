@@ -33,7 +33,7 @@ export function PlatformCard({ state }: { state: PlatformState }) {
           href={state.externalSearchUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 rounded-lg dt-border border px-2.5 py-1 text-xs hover:bg-white/5"
+          className="inline-flex items-center gap-1 rounded-lg dt-border border px-2.5 py-1 text-xs hover:bg-surface-overlay"
           aria-label={`Open ${state.platform} public search`}
         >
           Search <ExternalLink size={11} aria-hidden />

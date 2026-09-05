@@ -76,7 +76,7 @@ export function ConfirmDialog({
     <Modal open={open} onClose={onClose} title={title}>
       <p className="dt-muted text-sm mb-6">{message}</p>
       <div className="flex justify-end gap-2">
-        <button onClick={onClose} className="px-4 py-2 rounded-lg text-sm dt-border border hover:bg-white/5">
+        <button onClick={onClose} className="px-4 py-2 rounded-lg text-sm dt-border border hover:bg-surface-overlay">
           Cancel
         </button>
         <button

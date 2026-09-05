@@ -91,7 +91,7 @@ export function ProfileCard({ profile, onOpen, saved, onToggleSave, delay = 0 }:
         {onToggleSave && (
           <button
             onClick={() => onToggleSave(profile)}
-            className="inline-flex items-center gap-1.5 rounded-lg dt-border border px-3 py-1.5 text-xs hover:bg-white/5"
+            className="inline-flex items-center gap-1.5 rounded-lg dt-border border px-3 py-1.5 text-xs hover:bg-surface-overlay"
             aria-label={saved ? 'Remove from saved' : 'Save profile'}
           >
             {saved ? <BookmarkCheck size={13} className="text-accent-500" aria-hidden /> : <Bookmark size={13} aria-hidden />}

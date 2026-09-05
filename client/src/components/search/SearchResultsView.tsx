@@ -121,13 +121,13 @@ export function SearchResultsView({ data, onOpenProfile }: { data: SearchRespons
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <button onClick={() => doExport('json')} className="inline-flex items-center gap-1.5 rounded-lg dt-border border px-3 py-1.5 text-xs hover:bg-white/5" aria-label="Export results as JSON">
+          <button onClick={() => doExport('json')} className="inline-flex items-center gap-1.5 rounded-lg dt-border border px-3 py-1.5 text-xs hover:bg-surface-overlay" aria-label="Export results as JSON">
             <FileDown size={13} aria-hidden /> JSON
           </button>
-          <button onClick={() => doExport('csv')} className="inline-flex items-center gap-1.5 rounded-lg dt-border border px-3 py-1.5 text-xs hover:bg-white/5" aria-label="Export results as CSV">
+          <button onClick={() => doExport('csv')} className="inline-flex items-center gap-1.5 rounded-lg dt-border border px-3 py-1.5 text-xs hover:bg-surface-overlay" aria-label="Export results as CSV">
             <FileSpreadsheet size={13} aria-hidden /> CSV
           </button>
-          <button onClick={() => window.print()} className="inline-flex items-center gap-1.5 rounded-lg dt-border border px-3 py-1.5 text-xs hover:bg-white/5" aria-label="Print or save as PDF">
+          <button onClick={() => window.print()} className="inline-flex items-center gap-1.5 rounded-lg dt-border border px-3 py-1.5 text-xs hover:bg-surface-overlay" aria-label="Print or save as PDF">
             PDF (print)
           </button>
         </div>

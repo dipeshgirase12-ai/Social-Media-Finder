@@ -82,7 +82,7 @@ export default function Saved() {
                 </a>
                 <button
                   onClick={() => remove(s)}
-                  className="rounded-lg dt-border border px-3 py-1.5 text-xs hover:bg-white/5"
+                  className="rounded-lg dt-border border px-3 py-1.5 text-xs hover:bg-surface-overlay"
                 >
                   Remove
                 </button>

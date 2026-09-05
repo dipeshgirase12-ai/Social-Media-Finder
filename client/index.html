@@ -22,6 +22,14 @@
       name="twitter:description"
       content="Search a name, username, or website and discover publicly available developer profiles."
     />
+    <script>
+      (() => {
+        const stored = localStorage.getItem('devtrace_theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = stored === 'light' ? 'light' : stored === 'system' && !prefersDark ? 'light' : 'dark';
+        document.documentElement.className = theme;
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

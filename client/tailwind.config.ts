@@ -7,29 +7,29 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#6366F1',
-          50: '#EEF0FE',
-          100: '#E0E2FD',
-          200: '#C6C9FB',
-          300: '#A4A9F8',
-          400: '#818CF8',
-          500: '#6366F1',
-          600: '#4F46E5',
-          700: '#4338CA',
-          800: '#3730A3',
-          900: '#312E81',
+          DEFAULT: '#3B82F6',
+          50: '#EFF6FF',
+          100: '#DBEAFE',
+          200: '#BFDBFE',
+          300: '#93C5FD',
+          400: '#60A5FA',
+          500: '#3B82F6',
+          600: '#2563EB',
+          700: '#1D4ED8',
+          800: '#1E40AF',
+          900: '#1E3A8A',
         },
         accent: {
-          DEFAULT: '#22C55E',
-          100: '#DCFCE7',
-          400: '#4ADE80',
-          500: '#22C55E',
-          600: '#16A34A',
+          DEFAULT: '#10B981',
+          100: '#D1FAE5',
+          400: '#34D399',
+          500: '#10B981',
+          600: '#059669',
         },
         surface: {
-          DEFAULT: '#0B0F19', // page background (dark)
-          raised: '#111827', // cards (dark)
-          overlay: '#1F2937',
+          DEFAULT: '#090D16',
+          raised: '#111726',
+          overlay: 'var(--color-surface-overlay)',
         },
       },
       fontFamily: {

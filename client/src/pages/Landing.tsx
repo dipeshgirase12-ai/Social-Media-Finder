@@ -57,14 +57,14 @@ export default function Landing() {
             </motion.div>
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.12 }} className="relative hidden min-h-[320px] lg:block">
-            <div className="absolute inset-0 rounded-2xl border border-primary-400/20 bg-[var(--color-card)]/70 p-6 shadow-glow backdrop-blur-sm">
+            <div className="absolute inset-0 rounded-2xl border border-primary-400/20 bg-[var(--color-card)] p-6 shadow-card">
               <div className="flex items-center justify-between border-b dt-border pb-4">
                 <span className="dt-kicker">Live network</span>
                 <span className="flex items-center gap-2 text-xs text-accent-400"><span className="h-2 w-2 rounded-full bg-accent-400 shadow-[0_0_12px_currentColor]" />Operational</span>
               </div>
               <div className="mt-7 grid grid-cols-2 gap-3">
                 {[['04', 'sources indexed'], ['92%', 'match confidence'], ['18', 'signals found'], ['2.4s', 'avg. response']].map(([value, label]) => (
-                  <div key={label} className="rounded-xl border dt-border bg-[var(--color-bg)]/70 p-4">
+                  <div key={label} className="rounded-xl border dt-border bg-[var(--color-bg)] p-4">
                     <p className="text-2xl font-semibold tracking-tight text-primary-300">{value}</p>
                     <p className="dt-muted mt-1 text-xs">{label}</p>
                   </div>

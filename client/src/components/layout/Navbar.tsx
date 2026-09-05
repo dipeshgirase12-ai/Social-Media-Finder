@@ -11,7 +11,7 @@ export function Navbar() {
   const canGoBack = window.history.length > 1;
 
   return (
-    <header className="sticky top-0 z-50 border-b dt-border bg-[var(--color-bg)]/85 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b dt-border bg-[var(--color-bg)]">
       <nav className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6" aria-label="Main">
         <button
           type="button"

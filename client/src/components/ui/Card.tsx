@@ -32,7 +32,7 @@ export function Badge({
   className?: string;
 }) {
   const tones: Record<string, string> = {
-    neutral: 'bg-white/5 dt-muted',
+    neutral: 'bg-surface-overlay dt-muted',
     success: 'bg-accent-500/10 text-accent-500',
     primary: 'bg-primary-500/10 text-primary-300',
     warning: 'bg-amber-500/10 text-amber-400',
