@@ -51,14 +51,14 @@ export const SearchBar = forwardRef<HTMLFormElement, SearchBarProps>(function Se
           type="submit"
           disabled={value.trim().length < 2}
             className={`rounded-lg bg-primary-500 font-semibold text-white transition-colors hover:bg-primary-400 disabled:opacity-40 ${
-            size === 'lg' ? 'px-6 py-2.5 text-sm' : 'px-4 py-1.5 text-xs'
+            size === 'lg' ? 'px-3 py-2.5 text-sm sm:px-6' : 'px-3 py-1.5 text-xs sm:px-4'
           }`}
         >
           Search
         </button>
       </div>
       {size === 'lg' && (
-        <p className="dt-muted mt-3 text-center text-sm">
+        <p className="dt-muted mt-3 flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 text-center text-sm">
           Try:{' '}
           {EXAMPLES.map((ex, i) => (
             <span key={ex}>

@@ -16,15 +16,15 @@ export function MobileNav() {
   ];
 
   return (
-    <nav className="lg:hidden fixed bottom-0 inset-x-0 z-50 dt-glass border-t dt-border pb-[env(safe-area-inset-bottom)]" aria-label="Mobile">
-      <div className="grid grid-cols-4">
+    <nav className="fixed inset-x-0 bottom-0 z-50 border-t dt-border bg-[var(--color-card)] pb-[env(safe-area-inset-bottom)] lg:hidden" aria-label="Mobile">
+      <div className="mx-auto grid max-w-md grid-cols-4">
         {items.map((item) => (
           <NavLink
             key={item.to}
             to={item.to}
             end={'end' in item ? item.end : false}
             className={({ isActive }) =>
-              `flex flex-col items-center gap-0.5 py-2.5 text-[11px] ${
+              `flex min-w-0 flex-col items-center gap-0.5 px-1 py-2.5 text-[11px] ${
                 isActive ? 'text-primary-400' : 'dt-muted'
               }`
             }

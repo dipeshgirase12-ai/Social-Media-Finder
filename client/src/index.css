@@ -35,6 +35,7 @@
 
   body {
     @apply font-sans antialiased;
+    overflow-x: hidden;
     background-color: var(--color-bg);
     color: var(--color-text);
     background-image: linear-gradient(rgb(148 163 184 / 0.025) 1px, transparent 1px), linear-gradient(90deg, rgb(148 163 184 / 0.025) 1px, transparent 1px);

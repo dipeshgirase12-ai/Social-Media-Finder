@@ -12,7 +12,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b dt-border bg-[var(--color-bg)]">
-      <nav className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6" aria-label="Main">
+      <nav className="mx-auto flex h-14 max-w-7xl items-center gap-1.5 px-3 sm:h-16 sm:gap-4 sm:px-6" aria-label="Main">
         <button
           type="button"
           onClick={() => navigate(-1)}
@@ -23,11 +23,11 @@ export function Navbar() {
         >
           <ArrowLeft size={18} aria-hidden />
         </button>
-        <Link to="/" className="flex items-center gap-2 font-bold tracking-tight text-lg" aria-label="DevTrace home">
+        <Link to="/" className="flex shrink-0 items-center gap-2 font-bold tracking-tight text-lg" aria-label="DevTrace home">
           <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-primary-400/40 bg-primary-400/10">
             <Github size={17} className="text-primary-300" aria-hidden />
           </span>
-          Dev<span className="text-primary-400">Trace</span>
+          <span className="hidden sm:inline">Dev<span className="text-primary-400">Trace</span></span>
         </Link>
 
         <div className="ml-6 hidden items-center gap-1 md:flex">
@@ -51,12 +51,12 @@ export function Navbar() {
           </NavLink>
         </div>
 
-        <div className="ml-auto flex items-center gap-3">
+        <div className="ml-auto flex min-w-0 items-center gap-1.5 sm:gap-3">
           <ThemeToggle />
           {user ? (
             <div className="flex items-center gap-2">
-              <Button to="/dashboard" variant="secondary" size="sm">
-                <LayoutDashboard size={14} aria-hidden /> Dashboard
+              <Button to="/dashboard" variant="secondary" size="sm" className="px-2 sm:px-3">
+                <LayoutDashboard size={14} aria-hidden /> <span className="hidden sm:inline">Dashboard</span>
               </Button>
               {user.role === 'admin' && (
                 <Button to="/admin" variant="ghost" size="sm" aria-label="Admin dashboard">
@@ -73,11 +73,11 @@ export function Navbar() {
             </div>
           ) : (
             <div className="flex items-center gap-2">
-              <Button to="/login" variant="ghost" size="sm">
+              <Button to="/login" variant="ghost" size="sm" className="px-2 sm:px-3">
                 Sign in
               </Button>
-              <Button to="/register" size="sm">
-                <Search size={14} aria-hidden /> Get started
+              <Button to="/register" size="sm" className="px-2 sm:px-3">
+                <Search size={14} aria-hidden /> <span className="hidden sm:inline">Get started</span>
               </Button>
             </div>
           )}
